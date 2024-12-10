@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Valentine's Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #ff3366;
+        }
+        .card {
+            margin: 50px auto;
+            padding: 20px;
+            width: 300px;
+            border: 3px solid #ff6699;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .heart {
+            font-size: 50px;
+            cursor: pointer;
+            color: #ff3366;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            color: #ff3366;
+            font-weight: bold;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff6699;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ff3366;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Happy Valentine's Day!</h1>
+        <p>Click the heart to reveal a surprise message:</p>
+        <div class="heart" onclick="revealMessage()">❤️</div>
+        <div id="message" class="hidden-message">You make my heart skip a beat! 💖</div>
+        <button class="button" onclick="showExtra()">Click for Another Surprise</button>
+        <div id="extra-message" class="hidden-message">You're loved more than words can say! 🌟</div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+
+        function showExtra() {
+            document.getElementById('extra-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
